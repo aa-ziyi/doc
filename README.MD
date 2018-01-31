@@ -1,4 +1,21 @@
-# 记录日常学习，读书心得
+# ajax
 
-# seajs为什么依赖依赖 SPM 打包，模块的加载逻辑偏重，他的加载逻辑是什么
-# CMD 依赖就近，延迟执行
+# es6
+
+# java
+
+# js
+
+# js-moudle
+
+# mode
+
+# net
+
+# node 
+
+# security
+
+# webpack
+
+# 心得分享
