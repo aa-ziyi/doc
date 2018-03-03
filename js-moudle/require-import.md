@@ -1,0 +1,4 @@
+#  require 和 import 的区别
+
+最本质的区别是require是Commonjs.AMD,CMD定义的模块请求方式；而import是ES6定义的模块请求方式；
+从规范和实现定义来讲，require是动态加载的，而import是静态加载，运行的角度来讲require是运行去解析而import是编译的时候去解析
