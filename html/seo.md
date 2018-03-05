@@ -172,46 +172,4 @@ Disallow:
 <meta name="robots" content="onindex,nofollow">
 ```
 上面代码表示：禁止所有搜索引擎索引本页，禁止跟踪本页上的链接。
-
 当然还有其他类型的content，不过各个浏览器支持情况不同，所以这里忽略。
-
-sitemap
-站点地图格式分为HTML和XML两种。
-
-HTML版本的是普通的HTML页面sitemap.html，用户可以直接访问，可以列出站点的所有主要链接，建议不超过100条。
-
-XML版本的站点地图是google在2005年提出的，由XML标签组成，编码为utf-8，罗列页面所有的URL。其格式如下：
-
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-  <loc>//ke.qq.com</loc>
-  <lastmod>2015-12-28</lastmod>
-  <changefreq>always</changefreq>
-  <priority>1.0</priority>
-  </url>
-  ...
-</urlset>
-其中urlset,url,loc三个为必须标签，lastmod,changefreq,priority为可选标签。
-
-lastmod表示页面最后一次更新时间。
-
-changefreq表示文件更新频率，有以下几种取值：always, hourly, daily, weekly, monthly, yearly, never。其中always表示一直变动，每次访问页面内容都不同；而never表示从来不变。
-
-priority表示URL相对重要程度，取值范围为0.0-1.0，1.0表示最重要，一般用在网站首页，对应的0.0就是最不重要的，默认重要程度为0.5。（注意这里的重要度是我们标记的，并不代表搜索引擎真的就完全按照我们设置的重要度来排列）
-
-sitemap.xml不能超过10M，而且每个sitemap文件中url的条数不要超过5万条，当你的sitemap文件很大的时候，可以分解为多个文件。如下分为两条，一条为基础，一条为产品详细页。
-
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap><loc>//ke.qq.com/sitemap-basic.xml</loc><lastmod>2015-12-28T02:10Z</lastmod></sitemap>
-  <sitemap><loc>//ke.qq.com/sitemap-product.xml</loc><lastmod>2015-12-28T02:10Z</lastmod></sitemap>
-</sitemapindex>
-SEO工具
-百度搜索风云榜
-百度指数
-百度站长平台
-meta seo inspector，检查标签的，谷歌插件
-seo in china，百度收录的各种数据，谷歌插件
-check my links，检查链接，谷歌插件
-seo quake，统计各种数据，谷歌插件
-最后，本文参考百度搜索引擎优化指南2.0 和zac著作《SEO实战密码》（对SEO感兴趣的同学，可以买本看看）。

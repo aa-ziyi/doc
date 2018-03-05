@@ -105,8 +105,7 @@ maximum-scale 最大缩放比例
 minimum-scale 最小缩放比例
 user-scalable 是否允许用户缩放(yes/no)
 
-## 各浏览器平台
-Microsoft Internet Explorer
+## 各浏览器平台 Microsoft Internet Explorer
 <!-- 优先使用最新的ie版本 -->
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <!-- 是否开启cleartype显示效果 -->

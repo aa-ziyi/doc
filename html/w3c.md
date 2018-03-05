@@ -84,25 +84,12 @@ aside元素被包含在article元素中作为主要内容的附属信息部分�
 
 ## article元素
 article元素最容易跟section和div容易混淆，其实article代表一个在文档，页面或者网站中自成一体的内容，其目的是为了让开发者独立开发或重用。譬如论坛的帖子，博客上的文章，一篇用户的评论，一个互动的widget小工具。（特殊的section）
-
 除了它的内容，article会有一个标题（通常会在header里），会有一个footer页脚。
-
-article使用注意：
-
+### article使用注意：
 •自身独立的情况下：用article
-
 •是相关内容：用section
-
 •没有语义的：用div
 
 另外，说一下，HTML5其他结构元素标签
 HTML5节元素标签包括body article nav aside section header footer hgroup ，还有h1-h6和address。
-
-•address代表区块容器，必须是作为联系信息出现，邮编地址、邮件地址等等,一般出现在footer。demo 
-
-•h1-h6因为hgroup，section和article的出现，h1-h6定义也发生了变化，允许一张页面出现多个h1。
-
-作者：阿布_0caf
-链接：https://www.jianshu.com/p/6bc1fc059b51
-來源：简书
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+•address代表区块容器，必须是作为联系信息出现，邮编地址、邮件地址等等,一般出现在footer
