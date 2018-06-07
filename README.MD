@@ -1,21 +1,3 @@
-# ajax
+如如不动，了了分明
 
-# es6
-
-# java
-
-# js
-
-# js-moudle
-
-# mode
-
-# net
-
-# node 
-
-# security
-
-# webpack
-
-# 心得分享
+和繁重的工作一起修行。。。
