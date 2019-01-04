@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+</head>
+
+<body>
+	<script>
+		let person = {
+			name: 'demon'
+		}
+
+		let newObje = new Proxy(person, {
+			get(target, property) {
+				console.log(target); //代理的目标对象（person）
+				console.log(property); //访问的对象属性
+				if (property in target) {
+					return target[property];
+				}
+				throw new ReferenceError(property + '属性不在对象上');
+			}
+		});
+		console.log('==============');
+		console.log(newObje.name);
+		console.log('==================');
+		console.log(newObje.age);
+	</script>
+</body>
+
+</html>
