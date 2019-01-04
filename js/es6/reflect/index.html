@@ -1,0 +1,28 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+</head>
+
+<body>
+  <script>
+    function fn(name) {
+      return name;
+    }
+
+    let newFun = new Proxy(fn, {
+      apply(target, contenxt, args) {
+        // 如何执行函数？？？ reflect
+        console.log(target); // 目标对象
+        console.log(contenxt); // this指向
+        console.log(args); // 参数集合
+        return Reflect.apply(...arguments); // reflect 拦截函数执行
+        // return '函数只想'
+      }
+    })
+
+    console.log(newFun('wuli'));
+  </script>
+</body>
+
+</html>

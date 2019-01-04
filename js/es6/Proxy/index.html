@@ -26,6 +26,52 @@
 		console.log('==================');
 		console.log(newObje.age);
 	</script>
+
+	<script>
+		let obj = new Proxy({}, {
+			set(target, property, value) {
+				if (Number.isInteger(value)) {
+					target[property] = value; // 设置
+				}
+				throw new ReferenceError('必须为整书')
+				console.log(target);
+			}
+		})
+
+		obj.age = 123;
+		console.log(obj.age);
+	</script>
+
+	<script>
+		let json = {
+			a: 1,
+			b: 2
+		}
+
+		let newJson = new Proxy(json, {
+			deleteProperty(target, property) {
+				console.log();
+				// 类似充血对象的一些原生方法；
+			},
+			has(target, property) {
+				console.log('判断has方法是否存在');
+			},
+		})
+	</script>
+
+	<script>
+		function fn() {
+			return 'a'
+		}
+
+		let newFun = new Proxy(fn, {
+			apply() {
+				return '拦截函数'
+			}
+		})
+
+		console.log(newFun());
+	</script>
 </body>
 
 </html>
