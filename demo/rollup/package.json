@@ -1,0 +1,16 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "build-es": "rollup src/main.js -f es",
+    "build-es-bundle": "rollup src/main.js -f es",
+    "build": "node src/rollup-build.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^2.56.3"
+  }
+}
